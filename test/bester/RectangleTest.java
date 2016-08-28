@@ -3,6 +3,7 @@ package bester;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
 
 public class RectangleTest {
     @Test
@@ -14,7 +15,9 @@ public class RectangleTest {
 
     @Test
     public void shouldReturnRectangleWithLargestArea() throws Exception {
-        Rectangle rectangle = new Rectangle(2,3);
-        assertEquals(rectangle, rectangle.findBester(rectangle));
+        Rectangle rectangle1 = new Rectangle(2,3);
+        Rectangle rectangle2 = new Rectangle(3,3);
+
+        assertTrue(rectangle2.betterThan(rectangle1));
     }
 }
